@@ -402,7 +402,7 @@ def comp(): # these willdb_insert_into(sql_statment, inserts, location) never ha
     all_factors = db_pull_all_matches("SELECT Factor_ID, name_of_factor, head, tail FROM Factors WHERE Decision_ID = ?", (des_id, ), "add_factor 1")
     total_num_factors = len(all_factors)
    
-    if total_num_factors < 2: # THIS MIGHT BE UNESSASRY
+    if total_num_factors < 1: # THIS MIGHT BE UNESSASRY
         messagebox.showwarning("Problem with compairing factors", "There needs to be at least two factors")
         return
    
