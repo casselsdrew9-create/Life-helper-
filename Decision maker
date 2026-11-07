@@ -219,8 +219,8 @@ def open_decision_tree(Current_screen): # this moves to decisioini tree and crea
         lbl_not_yet = Label(List_of_Decisions_Frame, text="You have not made a decision yet", bg=Background, fg=Foreground) # creates something sayinig there are no deciisioins where there are no decisions
         lbl_not_yet.pack(pady=10)
     else: # other wise makes a button for each decision
-        for i in range(len(row)):            
-            Relevent_decisions(row[i][0], row[i][1]) # row[1] is the des_is row[2] is row_name makes a new button for each decision
+        for decision_id, name in row:            
+            Relevent_decisions(decision_id, name) # makes a new button for each decision
    
 class Relevent_decisions(): #this is for when it is catagory so only needs to have the pointer, and name as the data
     def __init__(self, decision_ID:int, decision_name:str): # pointer can accept int or None but forgot how to show that
