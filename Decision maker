@@ -40,10 +40,10 @@ CREATE TABLE IF NOT EXISTS Decisions (
 CREATE TABLE IF NOT EXISTS Factors (
     Factor_ID INTEGER PRIMARY KEY AUTOINCREMENT,
     Decision_ID INTEGER REFERENCES Decisions(Decision_ID),
-    name_of_factor TEXT,
-    head INTEGER,
-    tail INTEGER,
-    pro BOOLEAN
+    name_of_factor TEXT NOT NULL,
+    head INTEGER NOT NULL,
+    tail INTEGER NOT NULL,
+    pro BOOLEAN NOT NULL
 );
 """
 try:
